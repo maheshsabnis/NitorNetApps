@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_FirstApp", "CS_FirstApp\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{8FCA47F3-68A5-4D9B-8C58-D55063678BAF}"
 	ProjectSection(SolutionItems) = preProject
+		assignments.md = assignments.md
 		readme.md = readme.md
 	EndProjectSection
 EndProject
