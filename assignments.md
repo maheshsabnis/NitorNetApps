@@ -14,3 +14,18 @@ Perform FOllwing opertions on it
 	- Convert the string into word case, means first character of each word in upper case
 	- Find out a number in string that represents an year
 	- COnvert entire string in Upper and lower case
+
+# Day 2: Date:20-Dec-2022
+1. Modify the CS_Inheritence project by adding the Driver class from Staff class with properties like Allowance, overtime, MinNumberOfTrips.
+2. Modify the StaffLogic class by adding following abstract methods
+	- UpdateStaff(Staff staff)
+	- DeleteStaff(Staff staff)
+3. Add a DriverLogic class derived from the StaffLogic class to implemenet all methods for StaffLogi class
+4. Create a class UILogic, this class will contain methods for
+	- Register New Staff, Update, Delete Staff
+	- This class will also have following methods to read data form StaffDb class 
+		- ReadStaffByType(string staffType)
+			- Here the value of the staffType will be 'Doctor' , 'Nurse', 'Driver' and the method should return only the matching type staff from StaffDb 
+		- SortStaffByName()
+			- THis should sort all Staff
+5. Create an instance of UI class in Program.cs to show result.
