@@ -29,3 +29,13 @@ Perform FOllwing opertions on it
 		- SortStaffByName()
 			- THis should sort all Staff
 5. Create an instance of UI class in Program.cs to show result.
+
+# Day 3: Date:21-Dec-2022
+
+1. Create Extension methods for String Operations those are mentioned in Lab  of Day 1
+2. Print Second MAx Salary and EMpNAme for Employee
+3. Print Second MAx Salary and EmpName for Each Department
+4. Print First Record for Each Designation
+5. Print All Employees Group by DeptName as follows
+	- DeptName: {{NAME}}
+		- EmpNo	EMpNAme Salary	Designation
