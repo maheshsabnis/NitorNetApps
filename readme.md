@@ -54,3 +54,18 @@
 		-...
 	- T is Template for which the binary Copy of the Generic Collection class will be created in memory 
 
+# C# Programming FEatures
+	- Delegate
+		- It is used to invoke a method with its reference
+			- The delegate MUST know an address of the method
+			- The delegate acts as a 'Proxy' for the method
+			- Object A can invoke a metod from Object B using Delegate
+				- For A delegate is an method from Object B
+		- It is used to invoke a method Asynchronously
+		- Declare an Event
+		- USed for Evaluating Expressions anonymousl, C# 3.0+
+			- Lambda Expression
+	- Event
+		- A mechanism to geneate Notifications when "Something Happens"
+			- If Objet A executes a logic and and generate a notfication to object B then, A must raise an event and B must subscribe to it 
+	- Interfaces

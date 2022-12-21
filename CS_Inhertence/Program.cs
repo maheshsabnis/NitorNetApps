@@ -39,7 +39,8 @@ Staff nurse = new Nurse()
 
 NurseLogic nurseLogic = new NurseLogic();
 nurseLogic.Register(nurse);
-Console.WriteLine("Nurses");
+Console.WriteLine("Nurses" +
+    "");
 foreach (var record in nurseLogic.GetStaff())
 {
     /// Since the GLobal LIst is used for Doctors and Nurses the Casting is needed

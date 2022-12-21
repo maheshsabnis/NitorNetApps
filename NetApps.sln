@@ -22,13 +22,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_COllections", "CS_COllec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_List", "CS_List\CS_List.csproj", "{0AC6B17A-BAEC-4AD1-9031-099A7C9BA5C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Abstraction_Encapsuation", "CS_Abstraction_Encapsuation\CS_Abstraction_Encapsuation.csproj", "{B4E1F717-9A8B-4880-8911-C8FDD1F36EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Abstraction_Encapsuation", "CS_Abstraction_Encapsuation\CS_Abstraction_Encapsuation.csproj", "{B4E1F717-9A8B-4880-8911-C8FDD1F36EED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Inhertence", "CS_Inhertence\CS_Inhertence.csproj", "{008DE204-8B83-4BE0-9C46-C045BDE08783}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Inhertence", "CS_Inhertence\CS_Inhertence.csproj", "{008DE204-8B83-4BE0-9C46-C045BDE08783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Polymorphism", "CS_Polymorphism\CS_Polymorphism.csproj", "{FBA9EEDB-5CCC-43F3-B100-682263AC1F7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Polymorphism", "CS_Polymorphism\CS_Polymorphism.csproj", "{FBA9EEDB-5CCC-43F3-B100-682263AC1F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Static", "CS_Static\CS_Static.csproj", "{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Static", "CS_Static\CS_Static.csproj", "{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FUndamentals", "FUndamentals", "{BCAB6A56-7F7B-4AD9-B6E9-7F04EC436B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Delegate", "CS_Delegate\CS_Delegate.csproj", "{20B8D41C-148D-40BD-A31B-39C5BDCAB439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Event", "CS_Event\CS_Event.csproj", "{027C1CF0-380F-4DBE-A4DA-E69853770B69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +78,14 @@ Global
 		{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B8D41C-148D-40BD-A31B-39C5BDCAB439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B8D41C-148D-40BD-A31B-39C5BDCAB439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B8D41C-148D-40BD-A31B-39C5BDCAB439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B8D41C-148D-40BD-A31B-39C5BDCAB439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027C1CF0-380F-4DBE-A4DA-E69853770B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027C1CF0-380F-4DBE-A4DA-E69853770B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027C1CF0-380F-4DBE-A4DA-E69853770B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027C1CF0-380F-4DBE-A4DA-E69853770B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +99,8 @@ Global
 		{008DE204-8B83-4BE0-9C46-C045BDE08783} = {D004E5E2-4D9A-4B21-8AEC-54C003581C19}
 		{FBA9EEDB-5CCC-43F3-B100-682263AC1F7A} = {D004E5E2-4D9A-4B21-8AEC-54C003581C19}
 		{706F6D1C-C25C-42E6-8B41-89DF4A0A53B2} = {D004E5E2-4D9A-4B21-8AEC-54C003581C19}
+		{20B8D41C-148D-40BD-A31B-39C5BDCAB439} = {BCAB6A56-7F7B-4AD9-B6E9-7F04EC436B1B}
+		{027C1CF0-380F-4DBE-A4DA-E69853770B69} = {BCAB6A56-7F7B-4AD9-B6E9-7F04EC436B1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D49A9CD-D56C-4A12-97C2-83A6637B9120}
