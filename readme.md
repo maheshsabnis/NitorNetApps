@@ -97,3 +97,24 @@
 		- The Class that defines an extension method MUST be static
 		- The Method that acts as an etension method MUST be static
 		- THe first parameter of the method MUST be 'this' referred reference of the class / interface for which this method will act as an extension method
+- Generic COllections
+	-  USe Language Integrated Queries (LINQ)
+		- Expressions that uses
+			- Extension Methods
+				- Where, Select, OrderBy, Group By, Join, etc.
+			- Lambda Expressions
+				- Stadandard Delegates
+					- Fucn<>
+					- Action
+					- Predicate
+			- OPerators
+				- Take, Skip, First, FirOrDEfault. etc.
+			- Aggrigate Methods
+				- Sum, Min, Max, etc.s
+		- Declarative LINQ
+			- A Query Expression using Extension Methods and Lambda Expression
+		- Imperative Query
+			- Keywords Like SQL Query 
+			- Keywords
+				- select, where, orderby, groupby, etc.
+	

@@ -42,6 +42,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Interface_Real_World", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Extension_Method", "CS_Extension_Method\CS_Extension_Method.csproj", "{EB733E2F-E1F7-462B-93CF-9998F6B6AA7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_LINQ", "CS_LINQ\CS_LINQ.csproj", "{4C2E3C50-FA6B-46B1-9535-370DABB07EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_LINQ_Imperative", "CS_LINQ_Imperative\CS_LINQ_Imperative.csproj", "{0219336A-C650-4A8A-9333-39D817BC6B5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +108,14 @@ Global
 		{EB733E2F-E1F7-462B-93CF-9998F6B6AA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB733E2F-E1F7-462B-93CF-9998F6B6AA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB733E2F-E1F7-462B-93CF-9998F6B6AA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C2E3C50-FA6B-46B1-9535-370DABB07EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C2E3C50-FA6B-46B1-9535-370DABB07EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C2E3C50-FA6B-46B1-9535-370DABB07EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2E3C50-FA6B-46B1-9535-370DABB07EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0219336A-C650-4A8A-9333-39D817BC6B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0219336A-C650-4A8A-9333-39D817BC6B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0219336A-C650-4A8A-9333-39D817BC6B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0219336A-C650-4A8A-9333-39D817BC6B5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
