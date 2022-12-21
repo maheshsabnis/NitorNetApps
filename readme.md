@@ -69,3 +69,31 @@
 		- A mechanism to geneate Notifications when "Something Happens"
 			- If Objet A executes a logic and and generate a notfication to object B then, A must raise an event and B must subscribe to it 
 	- Interfaces
+		- Like Abstrat classes interfaces are also used to share standardization of method declarations across various classes
+		- Class can implement Multiple Interfaces
+			- When a class implement an interface then all methods of interface MUST be implemeneted by class
+			- It is recommended that the class should implement interface 'explicitly'
+				- The class provides definition for methods but they are 'OWNED by' interface
+			- Such a class can be instantiated using interface reference(?)
+				- e.g.
+					- I1 is interface
+					- C1 is class
+				- C1:I1	
+					- Define instance
+						- I1 i = new C1();
+							- i is reference of I1 that points to memory for C1
+			- I1, M1(), M2()
+			- I2, M3(), M4()
+			- C2:I1, I2
+				- C2 MUST implement M1, M2,M3, and M4
+			- When C2 instance is declare using I1
+				- I1 obj1 = new C2();
+					- Then obj1 will have access to M1 and M2 only
+				- I2 obj2 = new C2()
+					- obj2 will access M3 and M4 only
+
+- Extension Methods
+	- Rules:
+		- The Class that defines an extension method MUST be static
+		- The Method that acts as an etension method MUST be static
+		- THe first parameter of the method MUST be 'this' referred reference of the class / interface for which this method will act as an extension method

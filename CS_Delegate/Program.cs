@@ -17,7 +17,7 @@ namespace CS_Delegate
             // Use Case 2: Using Anoynmous Method aka Passing Implementation to Delegate
             // C# 2.0
             AddHandler handler1 =  delegate (int x, int y) { return x + y; };
-            Console.WriteLine($"Anonymous Method {handler(100,300)}");
+            Console.WriteLine($"Anonymous Method {handler1(100,300)}");
 
             // Access Method having input parameter as delegate
             Operation(delegate (int x, int y) { return x * y; });
