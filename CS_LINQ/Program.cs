@@ -14,7 +14,7 @@ Print(allEmps);
 Console.WriteLine();
 // Print All EMployees by DeptName
 
-var allEmpsByDname = Employees.Where(e=>e.DeptName == "IT");
+var allEmpsByDname = Employees.Where(e=>e.DeptName == "IT").AsParallel();
 
 Print(allEmpsByDname);
 

@@ -117,4 +117,74 @@
 			- Keywords Like SQL Query 
 			- Keywords
 				- select, where, orderby, groupby, etc.
-	
+
+# THreading
+	- AN Approach of performing follwing operations in apps
+		- Simulteneous Execution
+			- Case 1: Multiple methods are executed on seperate threads, these methods will not share common data and has an independent Execution
+			- Case 2: The common object (resource) is shared across multiple threads
+				- Acquire Exclusive Lock on Resource 
+		- Thread class
+			- Start()
+			- Abort()
+			- Join()
+		- ThreadStart Delegate
+		- ParameterizedThreadStart Delegate
+		- Thread t = new Thead(()=>{.....}); For ThreadStart
+		- Thread t = new Thread((x,y)=>{....}); For ParameterizedThreadStart
+		- PLan for Returning Value from THread
+			- Generaly use 'Join()' to receive data from thread
+		- MAke sure that the Exception Handling is on place
+		- THread SYnchronization using following
+			- 'lock', an object that allows only one thread to acquire resource control and rest all thares will be in wainting
+			- Monitor
+			- Mutex
+
+
+			- Parallel Execution
+				- .NET FRwk 4.0
+					- Parallel
+						- Invke(()=>{....... all parallel Operations.....})
+						- For()
+						- ForEach()
+					- Task
+						- UNit of Async OPerations
+							- Start()
+							- Run()
+							- FActory
+							- COntinueWith()
+
+			- Asynchronous Execution
+				- .NET 4.5 +
+					- Async Methods for all UnManaged Resurces(?)
+		
+- Task
+	- Unit of Async OPerations
+	- CReate and Manage THread Explicitly
+	- Offering
+		- Create a Single Task as a FActory	
+			- Task.Factory.StartNew(()=>{.......LOGIC........});
+				- CReate a THread and STart it
+				- Manage Execution
+				- Lose /  Terminate it
+		- Wait()
+			- Wait for a Task to Complete
+		- WaitAll(t1,t2,.....)
+			- wait for making sure that mentioned tasks in method are completed
+		- WaiAny()
+			- make a choice to complete a specific task
+		- ContinueWith()
+			- Move across Tasks
+			- When the previous task is over move to next task, also can carry output of first to next task
+			- Use this as a replacement o BAckground THread
+	- Task can be input and output parameter to method
+		- If the method returns task object then to process an execution of the method from caller we use async/await programming pattern (.NET 4.5, C# 5.0)
+		- In .NET and method ends with 'Async()' that returns a TAsk object
+			- The caller method MUST be decorated with access modifier as 'async' and the method aller MUST be applied with 'await'
+			- e.g.
+				- Connect to Database
+				- public async void GetDbConnecitonAsync()
+				{
+					// conn  is an instance of Connection class
+					await conn.OpenAsync();
+				}
