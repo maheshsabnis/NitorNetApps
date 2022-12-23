@@ -52,3 +52,4 @@ Perform FOllwing opertions on it
 # Day 5: Date:23-DEc-2022
 
 1. Copy Files in seperate folders as per an extension using Continue Tasks
+	- REad, Check Extension and then COpy
