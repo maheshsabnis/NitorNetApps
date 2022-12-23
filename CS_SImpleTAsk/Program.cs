@@ -4,8 +4,17 @@ FileOperations operations = new FileOperations();
 Task task = Task.Factory.StartNew(() => 
 {
     operations.ReadFileFirst(@"C:\NitorEltp\File1.txt");
-}); 
+});
 
+
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine($"Main THread {i}");
+}
+
+
+ 
 
 Console.ReadLine();
 
@@ -18,7 +27,7 @@ class FileOperations
         using (StreamReader sr = new StreamReader(fileName))
         {
             fileData = sr.ReadToEnd();
-            Thread.Sleep(5000);
+          //  Thread.Sleep(5000);
         }
 
         Console.WriteLine($"Data From FIle 1 {fileData}");
