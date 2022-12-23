@@ -50,6 +50,11 @@ foreach (var item in res4)
 
 
 
+var resObject = PrintEmployeesByDeptName(employees,"IT");
+
+Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(resObject));
+
+
 Console.ReadLine();
 
 static void Print(IEnumerable<Employee> employees)
@@ -59,4 +64,20 @@ static void Print(IEnumerable<Employee> employees)
         Console.WriteLine($"{record.EmpNo} {record.EmpName} {record.Salary} {record.DeptName} {record.Designation}");
     }
     Console.WriteLine();
+}
+
+/// EMpNo, EMpNAme, Income, and Tax
+static object PrintEmployeesByDeptName(List<Employee> employees, string deptName)
+{
+   var result =  from e in employees
+    where e.DeptName == "CTD"
+    select new 
+    {
+        EmployeeNo = e.EmpNo,
+        EmployeeName = e.EmpName,
+        Income = e.Salary,
+        Tax = e.Salary * 0.2
+    };
+
+    return result;
 }

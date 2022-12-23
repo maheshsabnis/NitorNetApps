@@ -48,3 +48,7 @@ Perform FOllwing opertions on it
 	- CReate a Salaryslip as a File .txt for each Staff as 
 		- [STaffId]-[Name]-[Date].txt
 	- The Salary Calculation MUST be executed as Parallel
+
+# Day 5: Date:23-DEc-2022
+
+1. Copy Files in seperate folders as per an extension using Continue Tasks
