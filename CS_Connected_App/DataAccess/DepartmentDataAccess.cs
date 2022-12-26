@@ -18,6 +18,7 @@ namespace CS_Connected_App.DataAccess
         public DepartmentDataAccess()
         {
             string connStr = "Data Source=.;Initial Catalog=Company;Integrated Security=SSPI";
+            //string connStr = "Data Source=.;Initial Catalog=Company;USer Id=[];PAssword=[]";
             Conn = new SqlConnection(connStr);
         }
 

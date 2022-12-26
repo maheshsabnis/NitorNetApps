@@ -96,6 +96,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Connected_App", "CS_Conn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_App_Dev_STandards", "CS_App_Dev_STandards\CS_App_Dev_STandards.csproj", "{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Disconnected", "CS_Disconnected\CS_Disconnected.csproj", "{B8D5A6CC-F5A7-4FE0-A280-7186A652863F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -234,6 +236,10 @@ Global
 		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D5A6CC-F5A7-4FE0-A280-7186A652863F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D5A6CC-F5A7-4FE0-A280-7186A652863F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D5A6CC-F5A7-4FE0-A280-7186A652863F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D5A6CC-F5A7-4FE0-A280-7186A652863F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,6 +274,7 @@ Global
 		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
 		{DE377A8F-004D-4BEA-87C2-7A3A02686536} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
 		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
+		{B8D5A6CC-F5A7-4FE0-A280-7186A652863F} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D49A9CD-D56C-4A12-97C2-83A6637B9120}

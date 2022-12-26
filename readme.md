@@ -188,3 +188,76 @@
 					// conn  is an instance of Connection class
 					await conn.OpenAsync();
 				}
+
+# ADO.NET Disconnected Architecture
+1. DataSet
+	- Stored data in XML Format
+	- Typed DataSet and UnTyped DataSet
+		- TYpedData has TAble COlumns with COnstraints e.g. Primary Key, FOreign Key, etc
+		- UnTyped DataSet on has the Table Schema and No COnstraints
+2. Connect to Database
+3. Declare DataAdapter
+	- Pass the "Plain Select STatement" and "Connection" object to it
+4. Define DataSet Instance
+	- DataSet Ds = new DataSet()
+5. Fill Data into the DataSet
+	- Adapter.MIssingSchemaAction = MissingSchemaAction.AddWithKey;
+		- THis will read table with its COnstraints (Typed DataSet)
+	- Adapter.Fill(DataSet, "TABLE-NAME")
+	- REad Data and its Schema from DataSet in Xml FOrmat
+		- DataSet.GetXml()
+		- DataSet.GetXmSchema()
+		- DataSet.ReadXml()
+			- Read an Xml file and fill data into dataset from Xml Filde
+		- DataSet.WriteXml()
+			- Create Xml file that will contains data from DataSet
+6. Object Model For DataSet
+	- COnsider Ds is an instace of DataSet
+		- Ds.Tables
+			- Return DataTAbleCollection
+		- Ds.Tables[INDEX | TABLE-NAME]
+			- Return an instance of DataTable
+		- Ds.Tables[INDEX | TABLE-NAME].Columns
+			- Return an instance of DataCOlumnCollection
+		- Ds.Tables[INDEX | TABLE-NAME].COlumns[INDEX | NAME-OF-COLUMN]
+			- Return an instance of DataColumn
+		- Ds.Tables[INDEX | TABLE-NAME].Rows
+			- Return an instance of  DataRowCollection
+		- Ds.Tables[INDEX | TABLE-NAME].Rows[INDEX]
+			- Retunr a DataRow object
+7. To REad a Row from Table BAsed on Primary Key
+	- From Typed DataSet
+		- Ds.Tables[INDEX | TABLE-NAME].Rows.Find("PRIMARY-KEY-VALUE");
+	- From Untyped DataSet
+		- Define a Untique columns fpr TAble
+			- Ds.Tables[INDEX | TABLE-NAME].Columns[INDEX | COUMN-NAME].Unique = true
+		- Make it as Not Null
+			- Ds.Tables[INDEX | TABLE-NAME].Colums[INDEX | COLUMN-NAME].AllowDbNull = false;
+		- TAke an array of dataclumns of all such colums			
+			- DataCOlumns [] dc = new DataCOlumns[]{ Ds.Tables[INDEX | TABLE-NAME].Colums[INDEX | COLUMN-NAME]}
+		- Make this array as Primary Key	
+			-  Ds.Tables[INDEX | TABLE-NAME].PrimaryKey = dc;
+		- Finally search ro based on Primary Key
+			- Ds.Tables[INDEX | TABLE-NAME].Rows.Find("PRIMARY-KEY-VALUE");
+8. Add a new Recrd in DataSet
+	- FIrst Create an new row object
+		- DataRow dr = Ds.Tables[INDEX | TABLE-NAME].NewRow();
+	- Set COumns values for this new row
+		- dr[IDNEX | COLUMN-NAME] = value;
+	- Add this New row in the rows collection of the Table
+		- Ds.Tables[INDEX | TABLE-NAME].Rows.Add(dr);
+	- Define a Command Buider and pass adapter to it
+		- SqlCommandBuilder bldr = new SqlCommandBuilder(Adapter);
+	- Call Update Methd of the Adapter to Update data from DataSet to Database Server
+		- Adapter.Update(DataSet, "TABLE-NAME");
+9. To Update
+	- Search REcord based on Primary Key (As per section 7)
+		- DataRow DrUdate = Ds.Tables[INDEX | TABLE-NAME].Rows.Find("PRIMARY-KEY-VALUE");
+	- Update Row Vaues
+		- DrUpdate[INDEX | COLUMN-NAME] = values
+	- USe COmand Builder
+	- Adapter Update (Refer Section 8)
+10.To Delete Record
+	- Search Record (Section 7)
+	- SearchedRwcord.Delete();
+	- USe Command Builder and Adapater (Refer Section 8)
