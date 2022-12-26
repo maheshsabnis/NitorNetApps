@@ -14,7 +14,7 @@ Console.WriteLine(Object.ReferenceEquals(p1, p2));
 
 Employee employee = new Employee()
 {
-    Allowances = 200000,Salary=99999
+    Allowances = 200000,Salary=9999
 };
 if (employee.PersonalDetails != null)
 {

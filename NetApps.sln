@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{8FCA47F3-68A5-4D9B-8C58-D55063678BAF}"
 	ProjectSection(SolutionItems) = preProject
 		assignments.md = assignments.md
+		db.sql = db.sql
+		dept.sql = dept.sql
+		emp.sql = emp.sql
 		oops.md = oops.md
 		readme.md = readme.md
 	EndProjectSection
@@ -67,23 +70,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_ParallelInvoke", "CS_Par
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_SImpleTAsk", "CS_SImpleTAsk\CS_SImpleTAsk.csproj", "{CD7AA37F-FE99-490C-8DC1-48E6C71FC0C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_AsyncDelegate", "CS_AsyncDelegate\CS_AsyncDelegate.csproj", "{99852A59-BD33-4F33-BF8F-CF57E381C7A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_AsyncDelegate", "CS_AsyncDelegate\CS_AsyncDelegate.csproj", "{99852A59-BD33-4F33-BF8F-CF57E381C7A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_AsyncDelegate_Frwk", "CS_AsyncDelegate_Frwk\CS_AsyncDelegate_Frwk.csproj", "{C99686AC-76B6-48F5-8BA2-BE23ABEE66A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Task_Return", "CS_Task_Return\CS_Task_Return.csproj", "{572A76CC-EE17-4593-8FBE-542D8514242D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Task_Return", "CS_Task_Return\CS_Task_Return.csproj", "{572A76CC-EE17-4593-8FBE-542D8514242D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Async_Await", "CS_Async_Await\CS_Async_Await.csproj", "{1FF153FE-B006-4D32-90D8-DBA2B25D8E64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Async_Await", "CS_Async_Await\CS_Async_Await.csproj", "{1FF153FE-B006-4D32-90D8-DBA2B25D8E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Task_Continue_ith", "CS_Task_Continue_ith\CS_Task_Continue_ith.csproj", "{02ED391D-D100-4C8D-A0D2-3093F1AFF8DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Task_Continue_ith", "CS_Task_Continue_ith\CS_Task_Continue_ith.csproj", "{02ED391D-D100-4C8D-A0D2-3093F1AFF8DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Members", "CS_Members\CS_Members.csproj", "{0D8E9D17-6A19-4CCA-91C7-8A979EEBD68E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Members", "CS_Members\CS_Members.csproj", "{0D8E9D17-6A19-4CCA-91C7-8A979EEBD68E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TuplesApp", "TuplesApp", "{A3793AA6-0923-43A7-8EB8-26D5D079480B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Tuples_Class", "CS_Tuples_Class\CS_Tuples_Class.csproj", "{CB3BFF92-61B0-4583-861B-AB99A8A05FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Tuples_Class", "CS_Tuples_Class\CS_Tuples_Class.csproj", "{CB3BFF92-61B0-4583-861B-AB99A8A05FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Objects", "CS_Objects\CS_Objects.csproj", "{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_Objects", "CS_Objects\CS_Objects.csproj", "{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbProjects", "DbProjects", "{D79DCDAD-B298-4637-92B2-D7700B3EBF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CD_ADONet_Conneted", "CD_ADONet_Conneted\CD_ADONet_Conneted.csproj", "{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Connected_App", "CS_Connected_App\CS_Connected_App.csproj", "{DE377A8F-004D-4BEA-87C2-7A3A02686536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_App_Dev_STandards", "CS_App_Dev_STandards\CS_App_Dev_STandards.csproj", "{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,6 +222,18 @@ Global
 		{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE377A8F-004D-4BEA-87C2-7A3A02686536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE377A8F-004D-4BEA-87C2-7A3A02686536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE377A8F-004D-4BEA-87C2-7A3A02686536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE377A8F-004D-4BEA-87C2-7A3A02686536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -242,6 +265,9 @@ Global
 		{0D8E9D17-6A19-4CCA-91C7-8A979EEBD68E} = {BCAB6A56-7F7B-4AD9-B6E9-7F04EC436B1B}
 		{CB3BFF92-61B0-4583-861B-AB99A8A05FA3} = {A3793AA6-0923-43A7-8EB8-26D5D079480B}
 		{0A1BCBB2-E72C-4DBF-8A07-DF8CE233CBB8} = {BCAB6A56-7F7B-4AD9-B6E9-7F04EC436B1B}
+		{EC8CB96D-8C67-4AC2-8BE1-2B639D49E8CC} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
+		{DE377A8F-004D-4BEA-87C2-7A3A02686536} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
+		{6D626DCC-7ED0-4CA1-8376-B079CCF425E4} = {D79DCDAD-B298-4637-92B2-D7700B3EBF38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D49A9CD-D56C-4A12-97C2-83A6637B9120}

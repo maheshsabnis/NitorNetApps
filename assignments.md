@@ -53,3 +53,6 @@ Perform FOllwing opertions on it
 
 1. Copy Files in seperate folders as per an extension using Continue Tasks
 	- REad, Check Extension and then COpy
+
+# Day 6: Date:26-Dec-2022
+1. IMplement CRUD Operations using ADO.NET COnnected Architecture

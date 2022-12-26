@@ -1,0 +1,22 @@
+USE [Company]
+GO
+
+/****** Object:  Table [dbo].[Department]    Script Date: 12/26/2022 11:24:49 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Department](
+	[DeptNo] [int] NOT NULL,
+	[DeptName] [varchar](100) NOT NULL,
+	[Capacity] [int] NOT NULL,
+	[Location] [varchar](100) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DeptNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
