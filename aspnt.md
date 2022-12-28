@@ -1,0 +1,50 @@
+# ASP.NET State Management
+
+1. The Web Server (IIS) is Stateless so that uess configured it won't save any data in it
+	- THis will save the memory utilization
+2. Use State Management Explicitly to maintain the state
+	- Client-Side State-Management
+		- The Server is configured to save data on client (aka at browser level)
+			- ViewState
+				- The data will be stored in Hidden Field
+					- This data will be maintained across consecutive post-back of same pase
+					- If data is more, then size of page will be more
+					- For Unnecessary VeiwState the page performance will be slowed down
+				- THis is PAge-Specific
+				- Data will be maintained for Consecutive REquests for the same page
+				- Data will be lost when moved to other page
+				- Each Web COntrol by default have ViewState using 'EnableViewState' property
+				- The 'ViewState' is a object to set data
+			- QueryString
+				- POrtion of the URL after Question Mark(?)
+					- e.g. http://www.MyServer.COm/page?Name=Value
+					- 'Name' is the key where the Data is saved
+					- 'Value' is data stored in Key
+				- The data is avaiable across 2 pages
+					- Sender Page define queryString to pass data to REceiver Page
+					- The Sender Page Sends data to Receiver page using following code
+						- Response.Redirect("Receiver.aspx?Name=Value");
+					- The Receiver PAge reads data like below
+						- Request.QueryString["Name"]
+				- The data is visible in URL	
+			- Cookies
+				- THese are files to store data in Browser on CLient's MAchine
+				- ANy page can access it and read data
+					- Request.Cookie["Key"] = value;
+	- Server-Side State Management
+		- The Data is Stored on Server
+			- Session
+				- Variables created and hthey are avalable for each new Session
+				- Each new Session will have thier own-copy of session state
+				- Data is avalable across all pages till the session is live
+				- Session will be stored on Web Server as follows
+					- InProc (DEfault), server's own memory
+					- Off
+						- No Session State, generaly used by web sotes with no transations
+					- StateServer
+						- A Seperate process where session state is saved other than web server's process
+					- SqlServer
+						- Session STate is stored in SQL Server
+			- Application
+				- GLobal to all sessions
+				- Data is shared across all sessions
