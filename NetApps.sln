@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{8FCA47F3
 		..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_5_Validation_Controls.pdf = ..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_5_Validation_Controls.pdf
 		oops.md = oops.md
 		readme.md = readme.md
+		TRainingAssessment.md = TRainingAssessment.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOPsDemos", "OOPsDemos", "{D004E5E2-4D9A-4B21-8AEC-54C003581C19}"

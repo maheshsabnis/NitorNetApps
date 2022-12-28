@@ -1,0 +1,43 @@
+# Training Assesment Statements
+
+1. Define a ASP.NET Core MVC Application that will be responsible for providing salary details for the employee based on following employee categories
+	- Full-Time
+		- BasicPay, HRA, TA, DA, OverTime, Weekends worked
+		- TDS Must be calculated based on Gross Salary Range (Please refer online TDS Deduction rules for the same)
+		- Leaves for the Staff
+			- Casual
+			- Medicle
+		- The Employee may submit his/het investment details e.g.
+			- Insurance
+			- PPF
+
+	- Consultant
+		- Fixed Pay for 10 Days
+		- After 10 Days Hourly working will be Rs. 2500/-
+		- The TDS will be cauculated as 10% of Total Income
+		- GST as 18% on Total INcome
+		- Net Pay will be
+			- Gross Income - TDS + (Gross * 18% GST)
+	- The Application will have following Roles
+		- Staff
+		- Manager is Staff
+		- Accoutant is Staff
+		- COnsultant
+	- The Investment Details can be submitted by each EMployee
+	- The Account can only generate Salary Details
+	- The Working hours fr COnsultant will only be approved by His Manager
+	- There will be Following Views in the Application
+		- Registration of the Staff
+		- Assign Role to Staff by the Administrator ROle
+			- Staff (THis is Default Role)
+			- Manager
+			- COnsultant
+			- Account
+		- View for Each staff to Submit Investment details
+		- View for cosultant to submit working hours
+		- View for manager to approve the Consultant Working Hours
+		- View for manager to approve overtime and weekend working for the Staff
+		- View to apply the leave by staff
+		- View to approve leave by the Manager
+		- Salary Processing View of each Staff (Including Consultant) this will be accessible by Account Role Only
+		- Each staff can see his salary details for the month
