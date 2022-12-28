@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace ASPNET_WebApp.Models
 {
+    public class Department
+    {
+        public int DeptNo { get; set; }
+        public string DeptName { get; set; }
+    }
+
+    public class Departments : List<Department> 
+    {
+        public Departments()
+        {
+            Add(new Department() { DeptNo=10,DeptName="IT"});
+            Add(new Department() { DeptNo = 20, DeptName = "SYS" });
+            Add(new Department() { DeptNo = 30, DeptName = "CTD" });
+            Add(new Department() { DeptNo = 40, DeptName = "HRD" });
+        }
+    }
 
     public class Employee
     {

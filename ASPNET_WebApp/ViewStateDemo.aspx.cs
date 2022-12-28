@@ -9,7 +9,7 @@ namespace ASPNET_WebApp
 {
     public partial class ViewStateDemo : System.Web.UI.Page
     {
-        static string Name = string.Empty;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,13 +17,15 @@ namespace ASPNET_WebApp
 
         protected void btnset_Click(object sender, EventArgs e)
         {
-            Name= txtname.Text;
+            // Saving the data from TextBox in ViewState Object
+            ViewState["Name"] = txtname.Text;
             txtname.Text = "";
         }
 
         protected void btnget_Click(object sender, EventArgs e)
         {
-            txtname.Text = Name;
+            // Retriving data from ViewState
+            txtname.Text = ViewState["Name"].ToString();
         }
     }
 }

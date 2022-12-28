@@ -68,3 +68,11 @@ Perform FOllwing opertions on it
 	- CReate COllection for States, Cities, and DEpartments
 	- SHow State and City in DropDownList and DEpartment in GridView
 2. When a StateName is selected, the dropdown shlowing cities should show only those cities in the selected State and the GridView should show Deparments from the Top/First displayed CityName in Cities DropDown. Similarly when the CityNAme is selected the GridView should show Departments fro selected City 
+
+
+# Day 8: Date 28-12-2022
+1. Perform CRUD operations on EMployee tabl with Data VAlidations by adding New WebForm
+2. Add a Webform that will show Employees Data in GridView
+	- Implement Pagination wher each page will show only 3 records
+	- Each Row MUST have a Delete button so when this button is clicked the row must be deleted
+

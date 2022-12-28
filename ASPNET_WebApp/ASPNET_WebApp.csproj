@@ -113,6 +113,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DeptDataAccess.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -126,6 +127,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MasterDetails.aspx" />
+    <Content Include="QueryStringReceiver.aspx" />
+    <Content Include="QueryStringSender.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -154,6 +157,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SesinReceiver.aspx" />
+    <Content Include="SessionSender.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewStateDemo.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -185,6 +190,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DeptDataAccess.aspx.cs">
+      <DependentUpon>DeptDataAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeptDataAccess.aspx.designer.cs">
+      <DependentUpon>DeptDataAccess.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +209,34 @@
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringReceiver.aspx.cs">
+      <DependentUpon>QueryStringReceiver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringReceiver.aspx.designer.cs">
+      <DependentUpon>QueryStringReceiver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryStringSender.aspx.cs">
+      <DependentUpon>QueryStringSender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringSender.aspx.designer.cs">
+      <DependentUpon>QueryStringSender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SesinReceiver.aspx.cs">
+      <DependentUpon>SesinReceiver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SesinReceiver.aspx.designer.cs">
+      <DependentUpon>SesinReceiver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionSender.aspx.cs">
+      <DependentUpon>SessionSender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionSender.aspx.designer.cs">
+      <DependentUpon>SessionSender.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +279,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.DataAccess\Application.DataAccess.csproj">
+      <Project>{6d809401-a8b4-43dc-a54d-bc48394fbacb}</Project>
+      <Name>Application.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
