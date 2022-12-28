@@ -58,6 +58,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS_LINQ_Imperative", "CS_LI
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DECDFCB5-CCFD-4754-A845-D4C9081AA1D6}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_1_StateManagement.pdf = ..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_1_StateManagement.pdf
 		..\..\..\Coditas\NetEltp\LINQ_HOL.pdf = ..\..\..\Coditas\NetEltp\LINQ_HOL.pdf
 	EndProjectSection
 EndProject
