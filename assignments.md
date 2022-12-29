@@ -76,3 +76,5 @@ Perform FOllwing opertions on it
 	- Implement Pagination wher each page will show only 3 records
 	- Each Row MUST have a Delete button so when this button is clicked the row must be deleted
 
+# Day 9: Date 29-12-2022
+1. Create MVC Application
