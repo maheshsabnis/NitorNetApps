@@ -124,4 +124,13 @@ Project Folders
 					- FileContetResult, Open file on server, read its contents an return thos contents
 					- FilePathResul, Open File on server and provides its path to client (Browser) so that file can be open in browser
 					- FileStreamResult, Download file on client as a Stream
+	- RAzor Veiws
+		- New eb Engine to Scaffold Views in MVC Apps
+		- .cshtml
+			- C# Code with Html Helper UI Elements
+		- Html Helper
+			- Lightweight HTML Server-Side Elements they are executed on Server and generate HTML UI 
+			- They performs 'Model-Binding'(?) using 'Lambda Expressions'
+				- Model-Binding is 'Binding' Public Property of Model class with HTML Helper UI Element so that when ENd-user enter data in this eleent, the Lambda expressio will eveluat it and will save this value in Model object
+			- The 'HtmHelper' class
 						

@@ -56,6 +56,42 @@ namespace Application.DataAccess.DataAccess
             return depts;
         }
 
+
+
+        public Department GetDepartments(int deptno)
+        {
+            Department dept = new Department();
+            try
+            {
+                Conn.Open();
+                Cmd = Conn.CreateCommand();
+                Cmd.CommandText = "select * from Department where DeptNo=@DeptNo";
+                Cmd.Parameters.AddWithValue("@DeptNo", deptno);
+                var reader = Cmd.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    dept.DeptNo = Convert.ToInt32(reader["DeptNo"]);
+                    dept.DeptName = reader["DeptName"].ToString();
+                    dept.Capacity = Convert.ToInt32(reader["Capacity"]);
+                    dept.Location = reader["Location"].ToString();
+                   
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                // THrow Exception so that when this method throws an execption
+                // The method caller will receiver it
+                throw ex;
+            }
+            finally
+            {
+                Conn.Close();
+            }
+            return dept;
+        }
+
         public int CreateDepartment(Department dept)
         {
             int Result = 0;
