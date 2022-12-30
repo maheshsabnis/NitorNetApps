@@ -165,3 +165,24 @@ Project Folders
 	- USe the Following package
 		- Unity.Mvc5
 		- Install it from 'Manage NuGet Packages'
+4. MVC View customization
+	- USe Cases
+		- Want to show data from model other than that is passed to view
+		- SHowing data of Parent Model in the view that is bound with child model
+		- When the View is showing non-scalar data e.g. Collections, Lists 
+	- USe ViewBag or ViewData pass the data to view which will be used to customize the view
+
+	- USing @Html.DropDownList()
+		- THis accepts 'SelectList'
+		- We can pass the data for SelectList using ViewBag or ViewData
+		- ViewData["Key"] =  value; OR ViewBag.Key = value
+			- If the View is perfoming Http POst of Model class, then the Name of the 'Key' MUST match with the 'Property of the Model class' that is posted 
+				- e.g. If EMployee.DeptNO is posted the Key must be DeptNo
+			- If a View Accepts ViewBag or ViewData then all action methods returning the same view MUST pass ViewBag or ViewData to the View
+	- To Share data across Controllers use one of the following (Can use both)
+		- TempData
+			- TempDataProvider whihc is based on Session but it is lightweight
+			- TempData["Key"] = Value
+			- When teh Target COntroller read s data from TempData, the TempData is cleaned / Cleared
+			- Still to keep the data in TempData in Taget Controller, then use 'TempData.Keep("Key")' to mintain specific Key else if 'TempData.Key()' is used then all keys will be maintain in the target controller
+		- Session

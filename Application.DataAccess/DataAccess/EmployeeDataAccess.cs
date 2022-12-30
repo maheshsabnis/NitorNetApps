@@ -152,7 +152,7 @@ namespace Application.DataAccess.DataAccess
                 pDeptNo.ParameterName = "@DeptNo";
                 pDeptNo.Direction = System.Data.ParameterDirection.Input;
                 pDeptNo.SqlDbType = System.Data.SqlDbType.Int;
-                pDeptNo.Value = emp.Salary;
+                pDeptNo.Value = emp.DeptNo;
                 Cmd.Parameters.Add(pDeptNo);
 
 

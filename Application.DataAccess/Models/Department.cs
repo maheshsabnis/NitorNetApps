@@ -22,10 +22,16 @@ namespace Application.DataAccess.Models
 
     public class Employee
     {
+        [Required(ErrorMessage = "EmpNo is required")]
+        [NumericNonNegative(ErrorMessage = "EmpNo cannot be -ve")]
         public int EmpNo { get; set; }
+        [Required(ErrorMessage = "EmpName is required")]
         public string EmpName { get; set; }
+        [Required(ErrorMessage = "Designation is required")]
         public string Designation { get; set; }
+        [Required(ErrorMessage = "Salary is required")]
         public int  Salary { get; set; }
+        [Required(ErrorMessage = "DeptNo is required")]
         public int DeptNo { get; set; }
     }
 

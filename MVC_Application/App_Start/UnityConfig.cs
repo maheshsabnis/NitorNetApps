@@ -19,7 +19,8 @@ namespace MVC_Application
             // REgistering DepartmentDataAccess as a 
             // Scopped Object (One object for each new Session)
            container.RegisterType<DepartmentDataAccess>();
-            
+            container.RegisterType<EmployeeDataAccess>();
+
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

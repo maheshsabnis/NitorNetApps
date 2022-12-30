@@ -15,7 +15,7 @@ namespace MVC_Application.Controllers
     /// For using Exception Filter ake sure that
     /// web.config has 'customError' model set to 'on' 
     /// </summary>
-    //  [HandleError(ExceptionType = typeof(Exception), View = "Error")]
+      [HandleError(ExceptionType = typeof(Exception), View = "Error")]
     // Applied the Custom Filter
     //  [LogFilter]
     
@@ -125,6 +125,16 @@ namespace MVC_Application.Controllers
         {
             var dept = dataAccess.DeleteDepartment(id);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult ShowEmployees(int id)
+        {
+            var dept = dataAccess.GetDepartments(id);
+
+            TempData["DeptNo"] = id;
+            TempData["Dept"] = dept;
+            // Idnex method from Employee Controller
+            return RedirectToAction("Index", "Employee");
         }
     }
 }
