@@ -134,3 +134,34 @@ Project Folders
 				- Model-Binding is 'Binding' Public Property of Model class with HTML Helper UI Element so that when ENd-user enter data in this eleent, the Lambda expressio will eveluat it and will save this value in Model object
 			- The 'HtmHelper' class
 						
+
+# MVC Programming
+1. Validations
+	- System.ComponentModel.DataAnnotations.dll
+		- ValidationAttribute
+			- AN Abstract BAse class
+				- bool IsValid(object val)
+				- USed to check the Vaidation based on LOgic
+		- RequiredAttribute, COmpareAttribute, StringLengthAttribute, RegExAttribute, etc.
+2. Two-Types of Validators in Application
+	- Data Validation
+		- Generally implemeneted using DataAnnotations
+	- Process BAsed Validations
+		- They are occured when posted data is valid, but the application while processing the data
+		- THis is Implemeneted using Exception Handling
+		- We can redirect to Error View to show errors, this view can accept data using 'HandlerErrorInfo' class
+			- This class has properties Fro ControllerNAme, ActionNAme, and Exception
+		- Each Action Method can have Try--Catch block
+		- Since Controller base class implements 'IExceptionFilter' interface, this provides 'OnException(ExceptionContext)' method
+			- We can implement this method once and we can write exception handling logic onece for all acton method for the controller
+			- In OnException, we can go to the Error View using 'ViewName' property of the ViewResult class, but we cannot pass the Model because 'Model' is read-only property
+			- Insetad, we can eitther create a custom Error view page (other than Error.cshtml) and Pass data to view using 'ViewData' or 'ViewBag'
+				- ViewData property of the type 'ViewDataDictionary', contains Key/Value pair of data that we want to ass from Action Method to View
+				- ViewBag, is Dynmaic object which will be casetd to DynamicViewDataDictionary at runtime
+		- USe ExceptionFilter to Handler Exceptions
+			- HandleErrInfoAttribute class that is an Action Filter
+			- Create Custom Exception Filter
+3. Make sure that the Depednency COntainer is created for al external Dependencies those MVC app has
+	- USe the Following package
+		- Unity.Mvc5
+		- Install it from 'Manage NuGet Packages'

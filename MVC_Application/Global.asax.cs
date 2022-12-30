@@ -13,6 +13,10 @@ namespace MVC_Application
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            // Call the UnityCOnfig THat will CReate an Instance of 
+            // Unity Dependency Container and this container has all
+            // Depednency Objets Registered in it
+            UnityConfig.RegisterComponents();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

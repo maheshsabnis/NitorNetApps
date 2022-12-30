@@ -7,15 +7,29 @@ using System.Web.Mvc;
 using Application.DataAccess;
 using Application.DataAccess.DataAccess;
 using Application.DataAccess.Models;
-
+using MVC_Application.CustomFilters;
 namespace MVC_Application.Controllers
 {
+    /// <summary>
+    /// Approach 3 for Handling Exceptions
+    /// For using Exception Filter ake sure that
+    /// web.config has 'customError' model set to 'on' 
+    /// </summary>
+    //  [HandleError(ExceptionType = typeof(Exception), View = "Error")]
+    // Applied the Custom Filter
+    //  [LogFilter]
+    
     public class DepartmentController : Controller
     {
         DepartmentDataAccess dataAccess;
-        public DepartmentController()
+        /// <summary>
+        /// Inject DepaetmentDataAccess dependency in COntroller
+        /// </summary>
+        /// <param name="ds"></param>
+        public DepartmentController(DepartmentDataAccess ds)
         {
-            dataAccess= new DepartmentDataAccess();
+            // dataAccess= new DepartmentDataAccess();
+            dataAccess = ds;
         }
 
         // GET: Department
@@ -42,9 +56,58 @@ namespace MVC_Application.Controllers
         [HttpPost]
         public ActionResult Create(Department department)
         {
-            dataAccess.CreateDepartment(department);
-            return RedirectToAction("Index");
+            // First Approach of hadling Exception
+            //try
+            //{
+                // now validate the Department Model
+                if (ModelState.IsValid)
+                {
+                    if (department.Capacity < 0)
+                        throw new Exception("Capacity Cannot be -ve");
+                    dataAccess.CreateDepartment(department);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    // Stey on Same Page
+                    return View(department);
+                }
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Return the Error Page and pass HandleErrInfo model with values
+            //    //  return View("Error", new HandleErrorInfo(ex, "Department", "Create"));
+            //    // Lets Generalized
+
+            //    return View("Error", new HandleErrorInfo(
+            //           ex, this.RouteData.Values["controller"].ToString(),
+            //           this.RouteData.Values["action"].ToString()
+            //         ));
+            //}
+
         }
+        /// <summary>
+        /// One method for all action methos in controller
+        /// Approach 2
+        /// </summary>
+        /// <param name="filterContext"></param>
+        //protected override void OnException(ExceptionContext filterContext)
+        //{
+        //     // 1. Set the ExceptionHandler property to true
+        //     filterContext.ExceptionHandled= true;
+        //    // 2.REad the Exception
+        //    Exception ex = filterContext.Exception;
+        //    // 3. set the result
+        //    ViewDataDictionary viewData = new ViewDataDictionary();
+        //    viewData["ControllerName"] = this.RouteData.Values["controller"].ToString();
+        //    viewData["ActionName"] = this.RouteData.Values["action"].ToString();
+        //    viewData["ExceptionMessage"] = ex.Message;
+        //    filterContext.Result = new ViewResult() 
+        //    { 
+        //        ViewName = "Error",
+        //        ViewData= viewData
+        //    };
+        //}
 
         public ActionResult Edit(int id)
         {
