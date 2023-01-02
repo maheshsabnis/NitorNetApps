@@ -82,3 +82,8 @@ Perform FOllwing opertions on it
 # Day 10: Date:30-12-2022
 1. Exceptions on Capaciity is crossed when the New employee i Department is added
 2. Using TempData Maintaining the Data that cause exceptions
+
+# Day 11: Date:02-01-2023
+
+1. THe EMployee Api COntroller creation
+2. Search API

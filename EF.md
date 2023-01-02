@@ -51,3 +51,23 @@
 			- ctx.Employees.Remove(Emp);
 		- Commit Transactions
 			- ctx.SaveChanges();
+
+4. USing COde First Approach
+	- INstall 'EntityFramework' PAckage in the Project
+	- IN App.COnfig file (or Web.COnfig file for MVC, ASP.NET and API projects of .NET Framework) wirh COnnection String in it
+		- NuGet\Install-Package EntityFramework -Version 6.4.4
+	- CReate ENtity Class(es)
+		- If multiple entities with relationships then establish relationships
+	- CReate DbContext class and using DbSet<T> define DbSet TYpe Propeties
+	- ENable The project for Migrations
+		- OPen the Tools -> Nuget Package Manager -> Package Manager Console
+		- Run FOllowing ommands
+			- Enable-Migration
+				- THis will make sure that the Current project will be enable for Code-First feature of EF
+			- Add-Migration
+				- THis command will generate following file
+					- [Migration-Name].cs
+						- This will contains C# script to generate Table(s) from ENtity Class(es)
+			- Update-Database
+				- THis will execute a Migration Script to generate Database and Tables
+				- THis will read the Connection string from App.COnfig file to conenct to Cnnect to SQL Sever and create database and Table(s) in it
