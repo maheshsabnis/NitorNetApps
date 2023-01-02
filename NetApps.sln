@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{8FCA47F3
 		assignments.md = assignments.md
 		db.sql = db.sql
 		dept.sql = dept.sql
+		EF.md = EF.md
 		emp.sql = emp.sql
 		..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_1_StateManagement.pdf = ..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_1_StateManagement.pdf
 		..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_2_UserControls_Custom_COntrols.pdf = ..\..\..\Users\acer\OneDrive\New_Lab_Documents\ASPNET\ASPNETLab\HOL_2_UserControls_Custom_COntrols.pdf
@@ -116,6 +117,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVCApps", "MVCApps", "{4C481B1E-A513-4995-8A71-99A1ED03450A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Application", "MVC_Application\MVC_Application.csproj", "{45662A46-BFD5-47DD-A68F-EBE1207B58FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM_API", "ORM_API", "{E8211181-1018-4EAF-8882-A3C6AAC821BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_EF_App", "CS_EF_App\CS_EF_App.csproj", "{D9BA598E-FF3A-49DF-969A-D39D2BBEB022}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -271,6 +276,10 @@ Global
 		{45662A46-BFD5-47DD-A68F-EBE1207B58FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45662A46-BFD5-47DD-A68F-EBE1207B58FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45662A46-BFD5-47DD-A68F-EBE1207B58FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BA598E-FF3A-49DF-969A-D39D2BBEB022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BA598E-FF3A-49DF-969A-D39D2BBEB022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BA598E-FF3A-49DF-969A-D39D2BBEB022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BA598E-FF3A-49DF-969A-D39D2BBEB022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -309,6 +318,7 @@ Global
 		{6B531C6A-4D3E-466B-8BE5-01B3C8157FE7} = {606FC91B-C98E-4C1B-8024-4EEF7B81BCCA}
 		{6D809401-A8B4-43DC-A54D-BC48394FBACB} = {606FC91B-C98E-4C1B-8024-4EEF7B81BCCA}
 		{45662A46-BFD5-47DD-A68F-EBE1207B58FF} = {4C481B1E-A513-4995-8A71-99A1ED03450A}
+		{D9BA598E-FF3A-49DF-969A-D39D2BBEB022} = {E8211181-1018-4EAF-8882-A3C6AAC821BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D49A9CD-D56C-4A12-97C2-83A6637B9120}

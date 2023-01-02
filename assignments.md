@@ -78,3 +78,7 @@ Perform FOllwing opertions on it
 
 # Day 9: Date 29-12-2022
 1. Create MVC Application
+
+# Day 10: Date:30-12-2022
+1. Exceptions on Capaciity is crossed when the New employee i Department is added
+2. Using TempData Maintaining the Data that cause exceptions
