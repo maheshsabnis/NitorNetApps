@@ -70,4 +70,4 @@
 						- This will contains C# script to generate Table(s) from ENtity Class(es)
 			- Update-Database
 				- THis will execute a Migration Script to generate Database and Tables
-				- THis will read the Connection string from App.COnfig file to conenct to Cnnect to SQL Sever and create database and Table(s) in it
+				- THis will read the Connection string from App.COnfig file to conenct to Cnnect to SQL Sever and create database and Table(s) using the connection
