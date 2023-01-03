@@ -1,0 +1,16 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Role</h2>
+
+@Html.BeginForm()
+{
+   ENter Role NAme:
+        @Html.EditorFor(m=>m.Name)
+
+   <input type="submit" value="Save"/> 
+}
+
+@Html.ActionLink("Back to Role LIst", "Index");

@@ -1,0 +1,30 @@
+﻿@model  MVC_IdentityApp.Models.UserRole
+@{
+    ViewBag.Title = "RoleToUser";
+}
+
+<h2>Assign Role to USer Here</h2>
+
+@Html.BeginForm()
+@{ 
+    <table>
+        <tbody>
+            <tr>
+                <td>Users</td>
+                <td>Roles</td>
+               
+            </tr>
+            <tr>
+                <td>
+                    @Html.DropDownList("UserId")
+                </td>
+                <td>
+                    @Html.DropDownList("RoleId")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Assign Role To User" />
+}
+
+
