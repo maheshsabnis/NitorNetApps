@@ -6,11 +6,15 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MVC_IdentityApp.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Linq;
+using System.Web;
 
 namespace MVC_IdentityApp
 {
     public partial class Startup
     {
+
         // For more information on configuring authentication, please visit https://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
@@ -18,6 +22,69 @@ namespace MVC_IdentityApp
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
+
+
+            #region Logic to CReate a Adminstrator ROle and Admin USer
+
+           
+            
+
+            ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            // 1. Check if Administrator Role Exist
+            var adminRole = dbContext.Roles.Where(r=>r.Name == "Administrator").FirstOrDefault();
+            if (adminRole == null)
+            {
+                dbContext.Roles.Add(new IdentityRole() { Name = "Administrator" });
+                dbContext.SaveChanges();
+
+               
+            }
+
+            // 2. Check the admin@myapp.com user
+            var adminUser = dbContext.Users.Where(u => u.UserName == "admin@myapp.com").FirstOrDefault();
+            if (adminUser == null)
+            {
+                // 2.a. Create USer
+                IdentityUser identityUser = new IdentityUser()
+                {
+                    Email = "admin@myapp.com",
+                    UserName= "admin@myapp.com",
+                    PasswordHash =   "ADMaNA4eg6s+c6iuZn4ZVqyePrDBzir7rvZwyvJqyLsN6BIP/HHaL4UzSd6FiZZNzg==" 
+                };
+
+                ApplicationUser applicationUser = new ApplicationUser() 
+                {
+                    Email = "admin@myapp.com",
+                    UserName = "admin@myapp.com",
+                   // PasswordHash = "P@ssw0rd_"
+                };
+                
+
+                //dbContext.Users.Add(applicationUser);
+                //dbContext.SaveChanges();
+
+                //var theuser = dbContext.Users.Where(u => u.UserName == "admin@myapp.com").FirstOrDefault();
+
+            
+                ApplicationUserManager user = new ApplicationUserManager(new ApplicationUserStore(dbContext));
+
+                user.Create(applicationUser, "P@ssw0rd_");
+
+
+                var theuser = dbContext.Users.Where(u => u.UserName == "admin@myapp.com").FirstOrDefault();
+                user.AddToRole(theuser.Id, "Administrator");
+
+
+
+
+            }
+
+
+            #endregion
+
+
+
 
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
@@ -65,4 +132,12 @@ namespace MVC_IdentityApp
             //});
         }
     }
+
+    // MEchanism to connect to the user Info Store
+    public interface IUserStore : IUserStore<ApplicationUser> { }
+
+    public class ApplicationUserStore : UserStore<ApplicationUser>, IUserStore {
+    public ApplicationUserStore(ApplicationDbContext dbContext)
+        : base(dbContext) { }
+}
 }

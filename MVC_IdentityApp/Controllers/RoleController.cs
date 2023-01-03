@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MVC_IdentityApp.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class RoleController : Controller
     {
         ApplicationDbContext context;
