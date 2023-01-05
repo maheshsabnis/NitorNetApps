@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CD_ADONet_Conneted": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:52803;http://localhost:52809"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CS_App_Dev_STandards": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:52806;http://localhost:52808"
+    }
+  }
+}

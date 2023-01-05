@@ -1,0 +1,26 @@
+﻿@model UserRole
+
+
+<form asp-action="AssignRoleToUser">
+     <table>
+         <thead>
+             <tr>
+                 <th>Select User</th>
+                <th>Select Role</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                <td>
+                    <select class="form-control" asp-for="@Model.UserId"
+                    asp-items="@ViewBag.UserId"></select>
+                </td>  
+                <td>
+                    <select class="form-control"
+                            asp-items="@ViewBag.RoleId" asp-for="@Model.RoleId"></select>
+                </td>  
+             </tr>
+         </tbody>
+     </table>
+     <input type="submit" value="Add Role to User" class="btn btn-primary"/>
+</form>

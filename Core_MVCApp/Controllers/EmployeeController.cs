@@ -1,6 +1,8 @@
 ﻿using Core_MVCApp.Models;
 using Core_MVCApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using Core_MVCApp.CustomSessions;
 
 namespace Core_MVCApp.Controllers
 {
@@ -19,7 +21,26 @@ namespace Core_MVCApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var records = await empServ.GetAsync();
+            IEnumerable<Employee> records = null;
+            // REad data from Session
+
+            //var deptData = HttpContext.Session.GetString("Dept");
+
+            //var deptObj = JsonSerializer.Deserialize<Department>(deptData);
+
+            var data = HttpContext.Session.GetCLRObject<Department>("Dept");
+
+            var dno = HttpContext.Session.GetInt32("DeptNo");
+            if (dno == 0)
+            {
+                records = await empServ.GetAsync();
+            }
+            else
+            {
+                records = (await empServ.GetAsync()).Where(e => e.DeptNo == dno).ToList(); 
+            }
+
+            
             return View(records);
         }
 
