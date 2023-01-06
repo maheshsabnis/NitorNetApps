@@ -26,6 +26,7 @@ namespace Core_MVCApp.Controllers
         [Authorize(Policy ="ReadPolicy")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Message = "Hay!!! I am Secure....";
             var records = await deptServ.GetAsync();
             return View(records);
         }

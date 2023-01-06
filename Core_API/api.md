@@ -1,0 +1,12 @@
+﻿# Model Binders aka Parameter Binders
+- Http Actin Method ATtrute to API controller to Received POst/Put data from Http Request and Map with CLR Object
+	- FromBody
+		- Recreive data from HTTP Body and Map wth CLR Object
+	- FromQuery
+		- Receive Data from QueryString and Map with CLR object
+	- FromRoute
+		- Received Route Values from Http Request and Map those values with CLR Object
+	- FromForm
+		- Recived Html Form POsted values and Map with CLR object
+	- FromHeader	
+		- Receive data from Http Header
